@@ -1,0 +1,57 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:host {
+  width: 100%;
+}
+
+/* 다음 버튼 */
+.btn-container {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.btn-container button {
+  width: 60%;
+  margin: 10px;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 550;
+}
+
+/* ---------- 4. 이메일 인증 ---------- */
+.div-verify-noti {
+  margin: 30px 0 50px 0;
+}
+
+.div-email-resend {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.div-email-resend span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .div-title span {
+    font-size: 0.9rem;
+  }
+
+  /* 인트로 박스 */
+  .div-intro {
+    padding: 5px 10px;
+  }
+
+  .div-intro p {
+    font-size: 0.8rem;
+  }
+
+  .div-verify-noti p {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,87 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--surface);
+}
+
+.div-roster {
+  display: flex;
+}
+
+.figure-position {
+  width: 80px;
+  margin: 0;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary);
+  border: 1px solid var(--on-secondary);
+}
+
+.figure-position img {
+  width: 30px;
+  height: 30px;
+}
+
+.figure-position figcaption {
+  margin-top: 5px;
+  color: var(--on-secondary);
+  font-size: 0.8rem;
+}
+
+.div-summoner {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-summoner figure {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
+  border: 1px solid var(--surface-line-color);
+  border-collapse: collapse;
+}
+
+.div-summoner figure img {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+}
+
+.div-summoner figure figcaption {
+  margin-left: 5px;
+  font-size: 0.9rem;
+}
+
+/* ---------- ?. 반응형 ---------- */
+@media (max-width: 768px) {
+  .figure-position img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .figure-position figcaption {
+    font-size: 0.7rem;
+  }
+
+  .div-summoner {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .div-summoner figure img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .div-summoner figure figcaption {
+    font-size: 0.8rem;
+  }
+}

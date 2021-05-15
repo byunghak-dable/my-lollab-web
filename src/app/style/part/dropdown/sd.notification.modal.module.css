@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+:host {
+  width: 450px;
+  height: 600px;
+  display: none;
+  flex-direction: column;
+  background-color: var(--background);
+  border: 1px solid var(--surface-line-color);
+  padding-bottom: 10px;
+}
+
+:host([focused]) {
+  display: flex;
+}
+
+/* 제목 */
+.div-title {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--surface-light-line-color);
+}
+
+.div-title span {
+  margin-left: 10px;
+}
+
+/* 알림이 없을 때 설명란 */
+.div-detail {
+  width: 100%;
+  min-height: 80%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-detail svg {
+  width: 100px;
+  height: 100px;
+}
+
+.div-detail span {
+  margin-top: 20px;
+  text-align: center;
+}

@@ -1,0 +1,193 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:host {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  padding: 50px 50px 100px 50px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+}
+
+/* ---------- 공용 ---------- */
+/* 버튼 */
+.btn-container {
+  margin-top: 30px;
+}
+
+.btn-container button {
+  width: 100%;
+  height: 50px;
+  font-size: 1rem;
+  font-weight: 550;
+}
+
+/* ---------- 1. 타이틀 ---------- */
+.div-title {
+  display: flex;
+  align-items: center;
+}
+
+.div-title img {
+  width: 45px;
+  margin-right: 15px;
+}
+
+.div-title label {
+  font-weight: bold;
+}
+
+/* ---------- 2. 일반 로그인 ---------- */
+.form-general-signin {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* 입력란 */
+.div-input {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.div-input label {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.div-input input {
+  margin-top: 5px;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid var(--light-grey-color);
+  outline: none;
+  font-size: 1.05rem;
+}
+
+.div-input input:focus {
+  border-bottom: 2px solid var(--primary);
+}
+
+/* 로그인 세팅 */
+.div-setting {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.div-setting label {
+  margin-left: 10px;
+  font-size: 0.9rem;
+}
+
+/* 다른 초이스 */
+.div-alternative {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+.div-alternative router-link {
+  font-size: small;
+  margin: 0 10px;
+  color: var(--blue-color);
+  text-decoration: underline;
+}
+
+.form-general-signin small {
+  display: none;
+  color: var(--red-color);
+}
+/* ---------- 3. sns 로그인 ---------- */
+/* TODO: 클래스명 수정하기 */
+.btn-container--sns {
+  width: 100%;
+  flex-direction: column;
+  border-top: 1px solid var(--light-grey-color);
+}
+
+.btn-container--sns button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px 10px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.16);
+  font-weight: 550;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.btn-container--sns .btn-kakao {
+  background-color: #fddd00;
+}
+
+.btn-container--sns .btn-google {
+  background-color: white;
+}
+
+.btn-container--sns button--google {
+  border: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+.btn-container--sns button figure,
+.btn-container--sns button div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-container--sns button figure {
+  flex: 1;
+  margin: 0;
+}
+
+.btn-container--sns button figure img {
+  width: 1.9rem;
+  padding-right: 5px;
+}
+
+.btn-container--sns button div {
+  flex: 4;
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.btn-container--sns button div span {
+  font-size: 0.9rem;
+}
+
+/* ---------- ?. 반응형 ---------- */
+@media (max-width: 480px) {
+  section {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .div-setting label {
+    font-size: 0.8rem;
+  }
+
+  .div-alternative router-link {
+    margin: 0 5px;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 319px) {
+  section {
+    padding: 15px 30px 50px 30px;
+  }
+}

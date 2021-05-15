@@ -1,0 +1,71 @@
+.div-section {
+  padding-top: 10px;
+}
+
+.div-section:first-child {
+  padding: 0;
+}
+
+.div-section span {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.div-section--position,
+.div-section--nutshell {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 보이스 */
+.div-section--voice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.div-section--voice img {
+  width: 20px;
+  height: 20px;
+}
+
+/* 포지션 */
+.svg-position {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid var(--surface-light-line-color);
+  cursor: pointer;
+}
+
+.svg-position:hover {
+  background-color: var(--surface-hover-color);
+}
+
+.svg-position[active] {
+  background-color: var(--surface-hover-color);
+}
+
+/* 한 마디 */
+.div-section--nutshell input {
+  padding: 10px;
+  border: 1px solid var(--surface-light-line-color);
+  outline: none;
+}
+
+/* 버튼 */
+.div-btn {
+  display: flex;
+  margin-top: 20px;
+}
+
+.btn-container button {
+  flex: 1;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+.btn-container .btn-cancel {
+  margin-right: 10px;
+  background-color: var(--light-grey-color);
+}

@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  content: '';
+  position: absolute;
+}
+
+:host {
+  width: 2.5rem;
+  background: var(--light-grey-color);
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  border: 1px solid var(--light-grey-color);
+  cursor: pointer;
+}
+
+span {
+  width: 50%;
+  padding-bottom: 50%;
+  border-radius: 100%;
+  background: var(--on-primary);
+}
+
+:host([checked]) {
+  background: var(--primary);
+}
+
+:host([checked]) {
+  justify-content: flex-end;
+}

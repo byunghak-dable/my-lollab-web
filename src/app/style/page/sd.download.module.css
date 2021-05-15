@@ -1,0 +1,251 @@
+* {
+  text-decoration: none;
+}
+
+/* ---------- 공용 ---------- */
+section {
+  width: 100%;
+}
+
+svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  -ms-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+  cursor: pointer;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+a,
+p {
+  font-size: 1.1rem;
+}
+
+/* ---------- 인트로 ---------- */
+.section-intro {
+  position: relative;
+  height: 650px;
+}
+
+.section-intro video {
+  width: 100%;
+  height: 650px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.section-intro article {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 50px;
+  background-color: var(--video-overlay-color);
+}
+
+.section-intro article .h1-logo img {
+  width: 80px;
+}
+
+.section-intro article p {
+  max-width: 600px;
+  color: #f0e6d2;
+  text-align: center;
+}
+
+.section-intro article .p-intro {
+  font-family: yg-jalnan, sans-serif;
+}
+
+.section-intro article .p-intro-detail {
+  margin-top: 50px;
+}
+
+.section-intro article .figure-lol-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-intro article .figure-lol-logo div {
+  max-width: 150px;
+  width: 50%;
+  height: 1px;
+  margin: 10px;
+  background-color: rgb(219, 166, 74);
+}
+
+.section-intro article .figure-lol-logo img {
+  width: 20px;
+}
+
+.section-intro article .btn-container {
+  margin-top: 20px;
+}
+
+.section-intro article .btn-container button {
+  padding: 20px 30px;
+}
+
+.section-intro article .btn-container button img {
+  margin-right: 10px;
+}
+
+.section-intro article .btn-container button span {
+  font-weight: 550;
+}
+
+/* ---------- 디테일 ---------- */
+.section-banner {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------- 공용 ------- */
+.article-contents {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+}
+
+.article-contents div {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 100px;
+}
+
+.article-contents div h2,
+.article-contents div p,
+.article-contents div a {
+  width: 100%;
+}
+
+.article-contents div a {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-top: 15px;
+  color: var(--on-primary);
+}
+
+.article-contents figure {
+  display: flex;
+  align-items: center;
+}
+
+.article-contents figure img {
+  width: 100%;
+}
+
+/* 사용자 설정 게임 게임 분석 */
+.article-contents--analyze div {
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
+
+.article-contents--analyze figure {
+  justify-content: flex-end;
+  position: relative;
+  left: -10%;
+  margin: 0;
+}
+
+/* 유틸리티 */
+.article-contnets--util {
+  background-color: rgb(240, 240, 240);
+  padding: 30px;
+}
+
+.article-contnets--util div a {
+  color: var(--on-background);
+}
+
+.article-contnets--util figure {
+  justify-content: center;
+}
+
+@media (max-width: 1253px) {
+  .article-contents {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .article-contents--analyze figure {
+    left: 0%;
+    bottom: 20%;
+  }
+
+  .article-contents figure img {
+    width: 70%;
+  }
+
+  .article-contnets--util div {
+    text-align: center;
+    padding: 50px;
+  }
+
+  .article-contnets--util div a {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 769px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  a,
+  p {
+    font-size: 1rem;
+  }
+
+  .article-contents--analyze div {
+    padding: 80px 50px;
+  }
+
+  .article-contents figure img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1rem;
+  }
+
+  a,
+  p {
+    font-size: 0.8rem;
+  }
+
+  .section-intro article {
+    padding: 0 20px;
+  }
+
+  .article-contents--analyze div {
+    padding: 50px 20px;
+  }
+
+  .article-contnets--util div {
+    padding: 30px;
+  }
+
+  .article-contents figure img {
+    width: 90%;
+  }
+}

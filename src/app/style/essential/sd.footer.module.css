@@ -1,0 +1,49 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  list-style: none;
+  white-space: nowrap;
+}
+
+:host {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 50px 50px 50px;
+  background-color: var(--surface);
+  color: var(--on-surface);
+}
+
+.ul-link {
+  padding: 0;
+  display: flex;
+}
+
+.ul-link li {
+  margin-right: 1rem;
+}
+
+.ul-link li router-link {
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+span {
+  margin-right: 1rem;
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.div-copyright {
+  margin-top: 5px;
+}
+
+.div-sns router-link img {
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+}

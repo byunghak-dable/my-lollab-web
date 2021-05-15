@@ -1,0 +1,98 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:host {
+  width: 100%;
+}
+
+.btn-container {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.btn-container button {
+  width: 60%;
+  margin: 10px;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 550;
+}
+
+.btn-container button img {
+  width: 25px;
+  display: none;
+  display: none;
+  animation: spin 1000ms infinite linear;
+}
+
+/* ---------- 3. 정보입력 ---------- */
+.form-enter-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.div-info-field {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.div-info-field label {
+  font-size: 0.9rem;
+}
+
+.div-info-field input {
+  margin-top: 5px;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid var(--light-grey-color);
+  outline: none;
+  font-size: 1.05rem;
+}
+
+.div-info-field input:focus {
+  border-bottom: 2px solid var(--primary);
+}
+
+.div-validation {
+  display: none;
+  margin: 5px 2px;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.div-validation img {
+  margin-right: 5px;
+}
+
+.btn-container button[loading] {
+  pointer-events: none;
+}
+
+.btn-container button[loading] img {
+  display: block;
+}
+
+.btn-container button[loading] span {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  /* 이메일, 비밀번호 입력 박스 */
+  .div-info-field {
+    margin-top: 10px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,321 @@
+:host {
+  display: grid;
+  grid-template-areas:
+    '. tab .'
+    '. search .'
+    '. summoner .'
+    '. pagination .';
+  grid-template-columns: 15% auto 15%;
+  grid-auto-rows: min-content;
+  position: relative;
+}
+
+/* ------ grid 공간 ------ */
+sd-tab {
+  grid-area: tab;
+  margin-top: 50px;
+}
+
+.section-search {
+  grid-area: search;
+}
+
+.section-summoners {
+  grid-area: summoner;
+  margin-top: 30px;
+}
+
+.div-pagination {
+  grid-area: pagination;
+  margin: 30px 0 50px 0;
+}
+
+/* ------ 공용 ------ */
+section {
+  width: 100%;
+  color: var(--on-surface);
+}
+
+/* ---------- 1. 상세 검색 ---------- */
+.section-search {
+  width: 100%;
+  padding: 0 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--surface);
+}
+
+/* ---------- 2. 소환사 리스트 ---------- */
+.section-summoners header {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 20px 30px;
+  background-color: var(--surface);
+  border: 1px solid var(--surface-line-color);
+}
+
+.section-summoners header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.section-summoners header span {
+  font-size: 1rem;
+  margin-top: 5px;
+  color: var(--font-grey-color);
+}
+
+.article-summoner {
+  margin-top: 15px;
+  background-color: var(--surface);
+  border: 1px solid var(--surface-line-color);
+}
+
+/* (1) 테이블 이름 */
+.div-table-title,
+sd-summoner-card {
+  width: auto;
+  display: grid;
+  grid-template-columns: 150px minmax(50px, 6%) minmax(50px, 6%) minmax(150px, 14%) minmax(90px, 10%) auto 10% minmax(70px, 5%) 5%;
+  padding: 20px 5px 10px 5px;
+  margin: 0 10px;
+  background-color: var(--surface);
+}
+
+sd-summoner-card {
+  grid-template-areas:
+    'profile position tier champion kda odds words date btn'
+    'profile position tier champion kda odds words discord btn';
+  border-bottom: 1px solid var(--surface-light-line-color);
+}
+sd-summoner-card:last-child {
+  border: none;
+}
+
+.div-table-title span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--font-grey-color);
+}
+
+/* (2) 소환사 카드 */
+/* 1) 리스트 모드인 경우 */
+.div-summoner:last-child {
+  border: none;
+}
+
+sd-summoner-card button {
+  grid-area: btn;
+}
+
+sd-summoner-card p {
+  grid-area: words;
+}
+
+sd-summoner-card .img-voice {
+  grid-area: discord;
+}
+
+sd-summoner-card span {
+  grid-area: date;
+}
+
+sd-summoner-card button {
+  width: min-content;
+  height: min-content;
+  justify-self: center;
+  align-self: center;
+  padding: 7px;
+}
+
+sd-summoner-card button img {
+  width: 20px;
+  height: 20px;
+}
+
+sd-summoner-card p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  padding: 10px 5px;
+  font-size: 0.7rem;
+  border: 1px solid var(--surface-line-color);
+  border-radius: 5px;
+}
+
+sd-summoner-card .img-voice {
+  justify-self: center;
+  align-self: center;
+}
+
+sd-summoner-card span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--font-grey-color);
+}
+
+/* 2) 카드 모드인 경우 */
+.article-summoner[card] {
+  display: grid;
+  row-gap: 15px;
+  column-gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+sd-summoner-card[card] {
+  grid-template-areas:
+    'date date . discord'
+    'profile . position tier'
+    'odds-title champion-title champion-title champion-title'
+    'odds champion champion champion'
+    'odds kda-title kda-title kda-title'
+    'odds kda kda kda'
+    'words words words btn';
+  grid-template-columns: 2fr auto 1fr 1fr;
+  padding: 5px;
+  margin: 0;
+  border: 1px solid var(--surface-line-color);
+}
+
+sd-summoner-card[card] span {
+  justify-content: flex-start;
+  padding: 5px 10px;
+}
+
+sd-summoner-card[card] p {
+  margin: 5px;
+}
+
+sd-summoner-card[card] button {
+  width: 70%;
+  padding: 10px;
+}
+
+/* 글쓰기 버튼 */
+.btn-default--write {
+  transform: translate(-100%);
+  position: relative;
+  left: 100%;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.div-floating {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+}
+
+.div-floating svg {
+  width: 45px;
+  height: 45px;
+  position: sticky;
+  top: 90%;
+  left: 90%;
+  margin-bottom: 200px;
+  padding: 10px;
+  background-color: var(--primary);
+  border-radius: 100%;
+  cursor: pointer;
+  pointer-events: visible;
+}
+
+.div-floating svg path {
+  fill: var(--on-primary);
+}
+
+/* ---------- ?. 반응형 ---------- */
+@media (max-width: 1400px) {
+  .article-summoner[card] {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1150px) {
+  .article-summoner[card] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  :host {
+    grid-template-areas:
+      'tab'
+      'search'
+      'summoner'
+      'btn'
+      'pagination';
+    grid-template-columns: auto;
+  }
+
+  .div-table-info {
+    font-size: 0.85rem;
+  }
+
+  .article-summoner[card] {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 830px) {
+  .article-summoner[card] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-summoners {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .section-summoners header {
+    background-color: var(--surface);
+    border: 1px solid var(--surface-line-color);
+  }
+}
+
+@media (max-width: 550px) {
+  .article-summoner[card] {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  sd-tab {
+    margin: 0;
+  }
+
+  section {
+    padding: 0;
+  }
+
+  .section-search {
+    margin-top: 80px;
+  }
+
+  .section-summoners header h2 {
+    font-size: 1rem;
+  }
+
+  .section-summoners header span {
+    font-size: 0.8rem;
+  }
+  .article-summoner[card] {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .div-floating svg {
+    top: 80%;
+    left: 80%;
+    margin: 0;
+  }
+}

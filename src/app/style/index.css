@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+:root {
+  --grey-color: rgba(0, 0, 0, 0.5);
+  --light-grey-color: rgba(0, 0, 0, 0.2);
+
+  --red-color: #ee5a52;
+  --blue-color: #3d95e5;
+  --yellow-color: #ffb130;
+  --video-overlay-color: rgba(0, 0, 0, 0.6);
+  --dark-overlay-color: #27282d;
+  --font-grey-color: #68696b;
+  --svg-background-color: #626262;
+
+  /* 테마 변경할 떄 변경되는 색상 */
+  --background: #fbfbfb;
+  --surface: white;
+  --primary: #00acf6;
+  --primary-light: #67deff;
+  --primary-dark: #007dc3;
+  --secondary: rgb(29, 86, 111);
+  --thrid: #666666;
+  --noti-box: #f3f5f7;
+
+  --on-background: black;
+  --on-surface: black;
+  --on-primary: white;
+  --on-primary-light: white;
+  --on-primary-dark: white;
+  --on-secondary: white;
+  --on-third: white;
+  --on-noti-box: black;
+
+  --surface-line-color: rgba(0, 0, 0, 0.2);
+  --surface-dark-line-color: rgba(0, 0, 0, 0.4);
+  --surface-light-line-color: #e3e3e3;
+
+  --surface-hover-color: rgba(0, 0, 0, 0.05);
+  --surface-active-color: rgba(0, 0, 0, 0.1);
+
+  /* 자주 사용하는 크기 */
+  --header-height: 56px;
+  --bottom-nav-height: 55px;
+}
+
+* {
+  font-family: Noto Sans KR, sans-serif;
+}
+
+/* 여기 어때 잘난체 배너에 주로 사용 */
+@font-face {
+  font-family: 'yg-jalnan';
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,203 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:host {
+  width: 100%;
+  display: grid;
+  grid-template-areas: 'profile position tier champion kda odds';
+  grid-template-columns: 150px minmax(50px, 8%) minmax(50px, 8%) minmax(150px, 18%) minmax(100px, 10%) auto;
+}
+
+.a-profile {
+  grid-area: profile;
+}
+
+.figure-position {
+  grid-area: position;
+}
+
+.figure-tier {
+  grid-area: tier;
+}
+
+.div-champion {
+  grid-area: champion;
+}
+
+.div-kda {
+  grid-area: kda;
+}
+
+.div-odds {
+  grid-area: odds;
+}
+
+figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.a-profile img,
+.figure-position img {
+  width: 35px;
+}
+
+/* ---------- 1. 소환사 이름 ---------- */
+.a-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.a-profile img {
+  border-radius: 100%;
+}
+
+.a-profile span {
+  margin-left: 10px;
+  font-size: 0.9rem;
+  white-space: normal;
+}
+
+/* ---------- 2. 라인 ---------- */
+.figure-position {
+  margin: 0;
+}
+
+.svg-position {
+  width: 20px;
+  height: 20px;
+  margin: auto;
+}
+
+/* ---------- 3. 티어 ---------- */
+.figure-tier {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.figure-tier img {
+  width: 25px;
+  height: 25px;
+}
+
+.figure-tier figcaption {
+  margin-left: 5px;
+  font-size: 0.8rem;
+}
+
+/* ---------- 4, 5 공통 선호 챔피언 ---------- */
+.div-odds {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* ---------- 4. 공통 선호 챔피언 ---------- */
+.div-champion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-champion sd-champion-card {
+  width: 35px;
+  height: 35px;
+}
+
+/* ---------- 5. 승률 그래프 ---------- */
+.div-odds span {
+  font-size: 0.8rem;
+}
+
+/* ---------- 6. KDA ---------- */
+.div-kda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-kda span {
+  font-size: 0.8rem;
+}
+
+/* ---------- 카드 모드인 경우 ---------- */
+:host([card]) {
+  grid-template-areas:
+    'profile . position tier'
+    'odds-title champion-title champion-title champion-title'
+    'odds champion champion champion'
+    'odds kda-title kda-title kda-title'
+    'odds kda kda kda';
+  grid-template-columns: 2fr auto 1fr 1fr;
+}
+
+.span-champion-title {
+  grid-area: champion-title;
+}
+
+.span-odds-title {
+  grid-area: odds-title;
+}
+
+.span-kda-title {
+  grid-area: kda-title;
+}
+
+.span-champion-title,
+.span-odds-title,
+.span-kda-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 5px;
+  font-size: 0.8rem;
+  color: var(--font-grey-color);
+}
+
+.span-kda-title {
+  margin-top: 10px;
+  border-top: 1px solid var(--surface-light-line-color);
+}
+
+:host([card]) .a-profile,
+:host([card]) .figure-position,
+:host([card]) .figure-tier {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--surface-light-line-color);
+}
+
+:host([card]) .figure-position,
+:host([card]) .figure-tier {
+  justify-content: center;
+}
+
+:host([card]) .a-profile {
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+
+:host([card]) .figure-tier {
+  flex-direction: column;
+}
+
+:host([card]) .figure-tier figcaption {
+  margin: 0;
+}
+
+:host([card]) .span-odds-title,
+:host([card]) .div-odds {
+  border-right: 1px solid var(--surface-light-line-color);
+}

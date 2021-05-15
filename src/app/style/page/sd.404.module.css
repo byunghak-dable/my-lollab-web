@@ -1,0 +1,24 @@
+a,
+router-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+a img,
+router-link img {
+  width: 100px;
+  height: 100px;
+  animation: spin 2000ms infinite linear;
+}
+
+/* ---------- ?. 애니메이션 ---------- */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

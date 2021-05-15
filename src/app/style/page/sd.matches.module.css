@@ -1,0 +1,111 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+:host {
+  display: grid;
+  grid-template-areas:
+    '. tab .'
+    '. search .'
+    '. match .'
+    '. pagination .';
+  grid-template-columns: 15% auto 15%;
+  grid-auto-rows: min-content;
+}
+
+sd-tab {
+  grid-area: tab;
+  margin-top: 50px;
+}
+
+.section-search {
+  grid-area: search;
+}
+
+.section-match {
+  grid-area: match;
+}
+
+.div-pagination {
+  grid-area: pagination;
+  margin: 30px 0 50px 0;
+}
+
+/* ------ (1) 상세 검색 ------ */
+.section-search {
+  width: 100%;
+  padding: 0 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--surface);
+  color: var(--on-surface);
+}
+
+/* ------ (2) 경기 리스트 ------ */
+.section-match {
+  display: grid;
+  row-gap: 24px;
+  column-gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 30px;
+}
+
+.section-match sd-scrim-card,
+.section-match sd-tournament-card {
+  width: 100%;
+}
+
+/* ---------- ?. 반응형 ---------- */
+@media (max-width: 1820px) {
+  .section-match {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1360px) {
+  .section-match {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  :host {
+    grid-template-areas:
+      'tab'
+      'search'
+      'match'
+      'pagination';
+    grid-template-columns: auto;
+  }
+
+  .section-match {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .section-match {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .section-match {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  sd-tab {
+    margin: 0;
+  }
+
+  .section-search {
+    margin-top: 80px;
+  }
+
+  .article-box {
+    padding: 0;
+  }
+}

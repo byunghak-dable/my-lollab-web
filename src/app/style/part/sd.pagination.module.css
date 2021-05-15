@@ -1,0 +1,23 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+router-link {
+  margin: 5px;
+  padding: 10px 15px;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  border: 1px solid var(--surface-light-line-color);
+  text-decoration: none;
+}
+
+router-link:hover {
+  background-color: var(--thrid);
+  color: var(--on-third);
+}
+
+router-link[active] {
+  color: var(--on-primary);
+  background-color: var(--primary);
+}

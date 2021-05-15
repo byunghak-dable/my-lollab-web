@@ -1,0 +1,172 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:host {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: var(--background);
+}
+
+section {
+  width: 600px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  padding: 50px 80px 100px 80px;
+}
+
+/* ---------- 공용 ---------- */
+/* 다음 버튼 */
+.btn-container {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.btn-container button {
+  width: 60%;
+  margin: 10px;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 550;
+}
+
+/* ---------- 1. 타이틀 ---------- */
+.article-title {
+  display: flex;
+  align-items: center;
+}
+
+.article-title img {
+  width: 45px;
+  margin-right: 15px;
+}
+
+.article-title label {
+  font-weight: bold;
+}
+
+/* ---------- ?. 회원가입 스탭 ---------- */
+.article-steps {
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5px;
+}
+
+.div-step__span {
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--grey-color);
+}
+
+.div-round {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  border-radius: 100%;
+  border: 3px solid var(--grey-color);
+}
+
+/* 스탭 라인 */
+.div-line {
+  width: 10%;
+  min-width: 10px;
+  height: 2px;
+  margin-top: 25px;
+  background-color: var(--grey-color);
+}
+
+/* 회원가입 절차 완료 시 */
+.div-step[completed] .div-step__span {
+  color: var(--primary);
+}
+
+.div-step[completed] .div-round {
+  border-color: var(--primary);
+}
+
+.div-line[completed] {
+  background-color: var(--primary);
+}
+
+/* ---------- 3. 회원가입 메인 ---------- */
+/* 안내문 */
+.p-intro {
+  background-color: var(--noti-box);
+  color: var(--on-noti-box);
+  padding: 20px 15px;
+  font-size: 0.85rem;
+}
+
+.article-main {
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* ---------- ?. 반응형 ---------- */
+@media (max-width: 600px) {
+  .section-sign-up {
+    width: 100%;
+    padding: 15px 50px 50px 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .article-steps span {
+    display: none;
+  }
+  .div-line {
+    margin: 10px 5px 0 5px;
+  }
+
+  .section-sign-up {
+    width: 100%;
+    padding: 15px 35px 50px 35px;
+  }
+
+  .div-privacy,
+  .div-terms {
+    height: 150px;
+  }
+
+  /* 폰트 크기 변경 */
+  .div-agree label,
+  .div-privacy,
+  .div-terms,
+  .div-title span {
+    font-size: 0.9rem;
+  }
+
+  .div-intro p {
+    font-size: 0.8rem;
+  }
+
+  .div-verify-noti p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 319px) {
+  .section-sign-up {
+    padding: 15px 20px 50px 20px;
+  }
+}

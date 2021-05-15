@@ -1,0 +1,105 @@
+/* 팀 게임 전적 */
+.div-record {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  background-color: var(--surface);
+  border: 1px solid var(--surface-line-color);
+  margin-bottom: 5px;
+}
+
+.div-record div {
+  display: flex;
+  align-items: center;
+}
+
+.div-date,
+.div-map,
+.div-result,
+.div-table,
+.div-point {
+  height: 65%;
+  padding: 15px;
+}
+
+.div-date,
+.div-map,
+.div-result,
+.div-table {
+  border-right: 1px solid var(--surface-light-line-color);
+}
+
+.div-date,
+.div-map,
+.div-result {
+  justify-content: center;
+}
+
+.div-result-flag {
+  height: 100%;
+  padding: 8px;
+}
+
+.div-date span {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.div-map {
+  display: flex;
+  flex-direction: column;
+}
+
+.div-map span,
+.div-map small {
+  color: var(--font-grey-color);
+}
+
+.div-result span {
+  font-size: 1.1rem;
+  padding: 0 15px;
+  font-weight: 600;
+}
+
+.div-table {
+  flex: 1;
+  justify-content: space-around;
+}
+
+.div-table figure {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.div-table figure img {
+  width: 35px;
+  height: 35px;
+}
+
+.div-table figure figcaption {
+  margin-left: 5px;
+  font-weight: 600;
+}
+
+.div-table span {
+  font-weight: 700;
+}
+
+.div-expand-btn {
+  width: 20px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c2c2c2;
+  cursor: pointer;
+}
+
+.div-expand-btn svg {
+  width: 25px;
+  height: 25px;
+  -ms-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}

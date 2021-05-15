@@ -1,0 +1,123 @@
+* {
+  white-space: nowrap;
+}
+
+:host {
+  display: grid;
+  grid-template-areas:
+    '. tab .'
+    '. search .'
+    '. team .'
+    '. pagination .';
+  grid-template-columns: 15% auto 15%;
+  grid-auto-rows: min-content;
+}
+
+/* ------ grid 공간 ------ */
+sd-tab {
+  grid-area: tab;
+  margin-top: 50px;
+}
+
+.section-search {
+  grid-area: search;
+}
+
+.section-team {
+  grid-area: team;
+  margin-top: 30px;
+}
+
+.div-pagination {
+  grid-area: pagination;
+  margin: 30px 0 50px 0;
+}
+
+/* ------ 공용 ------ */
+section {
+  width: 100%;
+  padding: 0 10px;
+  background-color: var(--surface);
+  color: var(--on-surface);
+}
+
+.section-team {
+  border: 1px solid var(--surface-line-color);
+}
+
+/* ---------- 1. 상세 검색 ---------- */
+.section-search {
+  width: 100%;
+  padding: 0 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- 2. 팀 ---------- */
+.section-team {
+  overflow-x: auto;
+}
+
+.div-table-title,
+sd-team-card {
+  min-width: 650px;
+}
+
+.div-table-title {
+  display: grid;
+  grid-template-columns: 5% 5% 15% 15% 8% 8% 8% 8% auto 10%;
+  padding: 20px 5px 10px 5px;
+  margin-bottom: 10px;
+}
+
+.div-table-title span {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--font-grey-color);
+}
+
+/* 팀 아이템 */
+sd-team-card {
+  align-items: center;
+  padding: 15px 5px;
+  border-bottom: 1px solid var(--surface-light-line-color);
+}
+
+/* ---------- ?. 반응형 ---------- */
+
+@media (max-width: 1281px) {
+  .div-table-title span {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  :host {
+    grid-template-areas:
+      'tab'
+      'search'
+      'team'
+      'pagination';
+    grid-template-columns: auto;
+  }
+}
+
+@media (max-width: 769px) {
+}
+
+@media (max-width: 480px) {
+  sd-tab {
+    margin: 0;
+  }
+
+  section {
+    padding: 0;
+  }
+
+  .section-search {
+    margin-top: 80px;
+  }
+
+  .section-summoners article {
+    padding: 15px 10px;
+  }
+}

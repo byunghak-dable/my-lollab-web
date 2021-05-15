@@ -1,0 +1,69 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:host {
+  width: 100%;
+}
+
+.btn-container {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.btn-container button {
+  width: 60%;
+  margin: 10px;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 550;
+}
+
+/* --- (1) 약관 동의 --- */
+.div-agree {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.div-agree label {
+  flex-basis: 3;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.div-agree label small {
+  color: var(--grey-color);
+}
+
+/* 약관 박스 */
+.div-terms {
+  width: 100%;
+  height: 200px;
+  margin-top: 15px;
+  padding: 10px;
+  overflow-y: scroll;
+  background-color: var(--noti-box);
+  color: var(--on-noti-box);
+}
+
+#terms-all {
+  padding-top: 25px;
+  border-top: 1px solid var(--light-grey-color);
+}
+
+@media (max-width: 480px) {
+  .div-privacy,
+  .div-terms {
+    height: 150px;
+  }
+
+  /* 폰트 크기 변경 */
+  .div-agree label,
+  .div-privacy,
+  .div-terms {
+    font-size: 0.9rem;
+  }
+}

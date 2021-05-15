@@ -1,0 +1,39 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+:host {
+  width: min-content;
+  display: flex;
+}
+
+span {
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 20px 50px;
+  justify-content: center;
+}
+
+span.active {
+  color: white;
+  background-color: var(--secondary);
+  color: var(--on-secondary);
+}
+
+@media (max-width: 480px) {
+  :host {
+    width: 100%;
+    position: fixed;
+    box-shadow: 0 0 3px var(--surface-line-color);
+    z-index: 2;
+  }
+
+  span {
+    flex: 1;
+    padding: 15px;
+  }
+}

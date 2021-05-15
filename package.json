@@ -1,0 +1,46 @@
+{
+  "name": "lol",
+  "version": "1.0.0",
+  "description": "This is LoL web client",
+  "main": "/dist/bundle.js",
+  "scripts": {
+    "test": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js -w -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ByungHakNoh/lol-web-client.git"
+  },
+  "keywords": [
+    "lol"
+  ],
+  "author": "ByunghakNoh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ByungHakNoh/lol-web-client.git/issues"
+  },
+  "homepage": "https://github.com/ByungHakNoh/lol-web-client.git#readme",
+  "dependencies": {
+    "firebase": "^8.5.0",
+    "lit": "^2.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "@types/webpack-env": "^1.16.0",
+    "@webcomponents/webcomponentsjs": "^2.5.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.2.1",
+    "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.0",
+    "image-webpack-loader": "^7.0.1",
+    "lit-element": "^2.5.0",
+    "lit-scss-loader": "^1.0.1",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^8.0.18",
+    "typescript": "^4.2.3",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

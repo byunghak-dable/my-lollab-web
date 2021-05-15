@@ -1,0 +1,168 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  list-style: none;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+:host {
+  width: 100%;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  box-shadow: 0 0 3px var(--surface-line-color);
+  background-color: var(--surface);
+  color: var(--on-surface);
+  z-index: 2;
+}
+
+sd-navigation {
+  flex: 1;
+}
+
+/* ---------- 공용 ---------- */
+.div-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------- 1. 로고 박스 ---------- */
+.div-menu--main {
+  margin-left: 35px;
+}
+
+.div-menu--main #hamburger-menu {
+  width: 30px;
+  height: 30px;
+  display: none;
+  margin-right: 15px;
+  z-index: 3;
+}
+
+.div-menu--main router-link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.div-menu--main router-link img {
+  width: 50px;
+}
+
+/* ---------- 3. 유틸리티 버튼 박스 ---------- */
+.div-menu--user {
+  margin-right: 35px;
+}
+
+.div-menu--user a:active,
+.div-menu--user router-link {
+  padding: 5px;
+  border-radius: 5px;
+  color: var(--on-surface);
+}
+
+/* 로그인 버튼 */
+.div-menu--user .link-signin {
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.div-menu--user .link-signin:hover {
+  background-color: var(--surface-hover-color);
+}
+
+.div-menu--user .link-signin svg {
+  margin-right: 5px;
+}
+
+.div-menu--user .link-signin svg path {
+  fill: #a0a4a8;
+}
+
+.div-menu--user .link-signin span {
+  color: var(--theme-font-grey-color);
+  font-size: 0.85rem;
+}
+
+/* 로그인 후 사용자 버튼 */
+.div-user-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* <1> 프로필 버튼 */
+.div-user-menu figure {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 10px;
+  padding: 0;
+  outline: none;
+}
+
+.div-user-menu .figure-profile {
+  margin: 0 0 0 20px;
+}
+
+.figure-profile img {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+/* 모달 공용 */
+sd-notification-modal,
+sd-user-modal {
+  position: fixed;
+  top: 50px;
+}
+
+/* <1> - 1 유저 모달 */
+sd-user-modal {
+  right: 10px;
+}
+
+/* <2> - 2 알림 모달 */
+sd-notification-modal {
+  right: 20px;
+}
+
+/* ---------- ?. 반응형 ---------- */
+@media (max-width: 1024px) {
+  .div-menu--main {
+    margin-left: 20px;
+  }
+
+  .div-menu--user {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .div-menu--main #hamburger-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .div-menu--user img,
+  .div-menu--user svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  sd-notification-modal,
+  sd-user-modal {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+  }
+}

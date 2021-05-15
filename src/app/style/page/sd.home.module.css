@@ -1,0 +1,311 @@
+/* ---------- 공용 ---------- */
+
+h2 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-weight: 550;
+}
+
+.btn-container--contents {
+  margin-top: 20px;
+}
+
+.btn-container--contents button {
+  width: 200px;
+  padding: 16px 40px;
+  font-size: 14px;
+}
+
+/* ---------- 1. 배너 ---------- */
+.section-banner {
+  width: 100%;
+  overflow: hidden;
+}
+
+.div-banner-video {
+  position: relative;
+}
+
+/* 배너 백그라운드 비디오 */
+.div-banner-video video {
+  width: auto;
+  height: auto;
+  position: absolute;
+  min-width: 100%;
+}
+
+/* 배너  */
+.article-banner {
+  width: 100%;
+  height: 720px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+  background-color: var(--video-overlay-color);
+}
+
+/* 배너 타이틀 */
+.div-banner-title {
+  position: relative;
+}
+
+.div-banner-title h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.div-banner-title h1:before {
+  width: 230px;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: calc(100% - 200px);
+  content: '';
+  background: var(--yellow-color);
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1), opacity 1s;
+  text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+}
+
+.div-banner-title h1 span {
+  position: relative;
+  font-family: 'yg-jalnan';
+  font-weight: 800;
+  font-size: 2.5rem;
+  padding: 10px;
+}
+
+/* 배너 설명 */
+.div-banner-detail {
+  max-width: 650px;
+}
+
+.div-banner-detail p {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+/* 배너 버튼 */
+.btn-container--banner button {
+  padding: 15px 50px;
+}
+
+.btn-container--banner button img {
+  width: 50px;
+  width: 50px;
+  margin-right: 20px;
+}
+
+.btn-container--banner button div {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-container--banner button div .span-noti,
+.btn-container--banner button div .span-signup {
+  font-weight: 500;
+}
+
+.btn-container--banner button div span.span-noti {
+  font-size: 0.9rem;
+}
+
+.btn-container--banner button div span.span-signup {
+  margin-top: 5px;
+  font-size: large;
+}
+
+/* ---------- 1. 소개 ---------- */
+.section-introduction,
+.article-synthesis,
+.article-contents {
+  width: 100%;
+}
+
+/* ------ (1) 콘텐츠 ------ */
+.div-contents-title {
+  width: 100%;
+}
+
+/* ------ (2) 종합 ------ */
+.article-synthesis {
+  background-color: #1f2123;
+  padding-top: 100px;
+  position: relative;
+}
+
+.figure-synthesis-background {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 100px;
+  margin: 0;
+}
+
+.figure-synthesis-background img {
+  width: 100%;
+}
+
+.div-synthesis-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin: 0 10%;
+  padding: 100px 0 80px 0;
+  background-size: 100% 80%;
+  background-image: linear-gradient(white, white);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.div-synthesis-main figure {
+  display: flex;
+  justify-content: center;
+}
+
+.div-synthesis-main figure img {
+  width: 80%;
+  max-width: 800px;
+}
+
+.div-synthesis-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.div-synthesis-detail p {
+  max-width: 530px;
+}
+
+/* ------ (3) 콘텐츠 소개 ------ */
+/* --- 공용 --- */
+.article-contents {
+  min-height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.figure-contents {
+  width: 33.5%;
+  display: flex;
+  justify-content: center;
+}
+
+.figure-contents img {
+  width: 75%;
+}
+
+.div-contents-detail {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+}
+
+/* --- 1) 스크림 --- */
+.article-contents--scrim {
+  background-color: #f0f0f0;
+}
+
+.figure-contents--scrim {
+  position: relative;
+  top: 100px;
+}
+
+/* --- 2) 팀 / 팀 전적 --- */
+.article-contents--team {
+  flex-wrap: wrap-reverse;
+  padding: 120px 0;
+  background-color: var(--primary);
+}
+
+.div-contents-detail--team {
+  color: white;
+}
+
+.article-contents--team .btn-container--contents button {
+  color: var(--primary);
+  background-color: white;
+}
+
+/* --- 3) 참여 유도 --- */
+.article-join {
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary);
+}
+
+.div-join-background {
+  width: 100%;
+  max-width: 1400px;
+  min-height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 0;
+  background-size: 100% 75%;
+  background-image: linear-gradient(rgb(247, 119, 2), rgb(247, 119, 2));
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.figure-contents--join img {
+  width: 100%;
+}
+
+.div-contents-detail--join {
+  padding: 0;
+  justify-content: flex-end;
+  color: white;
+  padding-bottom: 50px;
+}
+
+.article-join .btn-container--contents button {
+  background-color: #25282b;
+}
+
+/* ---------- ?. 반응형 ---------- */
+@media (max-width: 700px) {
+  .div-synthesis-main {
+    margin: 0 5%;
+  }
+
+  .article-contents {
+    padding: 80px 0;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h2,
+  p {
+    text-align: center;
+  }
+
+  .figure-contents {
+    width: 100%;
+    position: unset;
+  }
+
+  .div-contents-detail {
+    width: 100%;
+  }
+}

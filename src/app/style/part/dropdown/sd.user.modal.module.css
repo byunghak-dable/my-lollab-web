@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+:host {
+  width: 300px;
+  display: none;
+  background-color: var(--background);
+  border: 1px solid var(--surface-line-color);
+  padding-bottom: 10px;
+}
+
+:host([focused]) {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 제목 */
+.div-title {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--surface-light-line-color);
+}
+
+.div-title span {
+  margin-left: 10px;
+}
+
+/* 프로필 */
+.div-profile {
+  display: grid;
+  grid-template-areas:
+    'profile name'
+    'profile email'
+    '. btn';
+  justify-content: flex-start;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid var(--surface-light-line-color);
+}
+
+.div-profile img {
+  grid-area: profile;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin-right: 15px;
+}
+
+.div-profile span {
+  grid-area: name;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  vertical-align: center;
+}
+
+.div-profile small {
+  grid-area: email;
+  font-size: 0.8rem;
+}
+
+.div-profile button {
+  width: fit-content;
+  grid-area: btn;
+  margin-top: 8px;
+  border: none;
+  text-align: start;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--primary);
+  font-weight: 600;
+  font-family: Noto Sans KR, sans-serif;
+  outline: none;
+  cursor: pointer;
+}
+
+/* 메뉴 아이템 */
+.menu {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+.menu:hover {
+  background-color: var(--surface-hover-color);
+}
+
+.menu.line {
+  border-top: 1px solid var(--surface-light-line-color);
+}
+
+.menu span {
+  flex: 1;
+  font-size: 0.9rem;
+  margin-left: 15px;
+}

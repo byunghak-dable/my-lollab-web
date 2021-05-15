@@ -1,0 +1,52 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:host {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.form-search {
+  display: flex;
+  align-items: center;
+}
+
+.form-search img {
+  width: 25px;
+}
+
+.form-search input {
+  width: 70%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: var(--font-grey-color);
+  margin-left: 5px;
+}
+
+.btn-container button {
+  padding: 12px 25px;
+}
+
+.btn-container button span {
+  margin-left: 5px;
+}
+
+/* ---------- ?. 반응형 ---------- */
+@media (max-width: 480px) {
+  :host {
+    padding: 10px 5px;
+  }
+  .btn-container button {
+    padding: 12px;
+  }
+
+  .btn-container button span {
+    display: none;
+  }
+}

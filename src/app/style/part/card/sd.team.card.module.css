@@ -1,0 +1,49 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+:host {
+  display: grid;
+  grid-template-columns: 5% 5% 15% 15% 8% 8% 8% 8% auto 10%;
+}
+
+img {
+  margin: auto;
+  width: 25px;
+  height: 25px;
+}
+
+span {
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.span-name,
+.span-representative {
+  font-size: 0.9rem;
+}
+
+.span-personnel,
+.span-recruiting,
+.span-exp,
+.span-create-date {
+  font-size: 0.8rem;
+}
+
+sd-odds-circle-graph {
+  display: none;
+}
+
+/* ---------- ?. 반응형 ---------- */
+@media (max-width: 1281px) {
+  sd-odds-linear-graph {
+    display: none;
+  }
+
+  sd-odds-circle-graph {
+    display: flex;
+  }
+}

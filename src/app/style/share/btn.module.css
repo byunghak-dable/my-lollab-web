@@ -1,0 +1,26 @@
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.btn-container button,
+.btn-default {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: 0;
+  border-radius: 2px;
+  background-color: var(--primary);
+  color: var(--on-primary);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn-container button:disabled,
+.btn-default:disabled {
+  background-color: var(--light-grey-color);
+  cursor: unset;
+}
